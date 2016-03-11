@@ -1,10 +1,65 @@
 <html>
 <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <title>SVG playground</title>
+    <style TYPE="text/css">
+    <!-- 
+    html {
+        font-family: "monospace";
+    }
+    body {
+        margin: 0;
+    }
+    .js-warning {
+        background: #FFC869;
+        text-align: center;
+    }
+    .js-warning-text {
+        margin: 0;
+    }
+    #content {
+        margin: 6;
+    }
+    h1 {
+        font-size: large;
+    }
+    h2, #main-list {
+        font-size: medium;
+    }
+    .svg-object {
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12) ! important;
+        padding: 10px;
+    }
+    .references {
+        margin-left: 1cm;
+        font-size: small;
+    }
+    -->
+    </style> 
 </head>
 <body>
-    <b>Click on an image to start or restart</b>
-    <p></p>
-    <object id="svg1" data="card.svg" type="image/svg+xml" style="box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12) ! important; padding: 10px;"></object>
+    <div id="js-warning" class="js-warning"><p class="js-warning-text">Enable JavaScript, please.</p></div>
+    <div id="content">
+        <h1>SVG playgroud. Click on an image to start or restart.</h1>
+        <ol id="main-list">
+            <li>
+                <h2>Path tracing.</h2>
+                <object id="svg1" data="card.svg" type="image/svg+xml" class="svg-object"></object>
+                <div class="references">
+                    <p>References:</p>
+                    <ol>
+                        <li><a href="http://www.curious-creature.com/2013/12/21/android-recipe-4-path-tracing/">Android Recipe #4, path tracing</a> by Romain Guy.</li>
+                        <li><a href="https://habrahabr.ru/company/2gis/blog/275489/">One ProgressBar's story (in Russian)</a> by 2GIS team.</li>
+                    </ol>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.body.removeChild(document.getElementById("js-warning"))
+        })
+    </script>
 </body>
 </html>
