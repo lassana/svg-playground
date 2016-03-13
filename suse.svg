@@ -39,14 +39,18 @@
     </g>
     <script id="script4265"><![CDATA[
         document.addEventListener("DOMContentLoaded", function(event) { 
-            var timing = 25
+            var timing = 32
             var interval = null
         
             var clipPath = document.getElementById("clipPath4769")
             var clipPathData = document.getElementById("path4771")
             var shift = 0
+            var spikesCount = 20
+            var waveHeight = 20
             var height = document.getElementById("layer1").getBBox().height
             var width = document.getElementById("layer1").getBBox().width
+
+            alert(buildClippingPathForHeight(100))
             
             document.getElementById("svg4154").addEventListener("click", function () {
                 window.clearInterval(interval)
@@ -55,7 +59,7 @@
                 shift = 0 
                 
                 interval = setInterval(function () {
-                    shift -= 1
+                    shift -= 2
                     
                     var aPath = buildClippingPathForHeight(-1 * shift)
                     clipPathData.setAttribute("d", aPath)
@@ -66,26 +70,44 @@
                 }, timing)
             })
             
-            function buildClippingPathForHeight(heightDiff) {
+            function buildClippingPathForHeight(step) {
+                //m 0,336        0,-100  332.5,-70     332.5,70      0,100 z
+                //m 0,335.98437  0,-100  332.24805,-70 332.24804,70  0,100 z
+                
+            
+                console.log("step = " + step)
                 var spikesPath = ""
                 
                 //move to a bottom-left point
                 spikesPath += "m 0," + height
                 
                 //move to a top-left point
-                spikesPath += " 0, -" + heightDiff
+                spikesPath += " 0,-" + step
                 
                 //TODO draw a arrows or something
                 
+                var heightDiff = waveHeight
+                var widthDiff = width / (spikesCount + 1)
+                
+                var nextX = widthDiff
+                var nextY = -1 * heightDiff
+                for (var i = 0; i < spikesCount+1; i++) {
+                    spikesPath += " " + nextX + "," + nextY
+                    //nextX += widthDiff
+                    nextY = (i % 2 == 0) ? (heightDiff) : (-1 * heightDiff)
+                }
+                
                 //move to a top-right point
-                spikesPath += " " + width + ",0"
+                //spikesPath += " " + width + ",0"
                 
                 //move to a bottom-right point
-                spikesPath += " 0," + heightDiff
+                spikesPath += " 0," + (step + (spikesCount % 2 == 0 ? nextY : 0))
                 
                 //close path data
                 spikesPath += " z"
 
+                console.log("spikesPath = " + spikesPath)
+                
                 return spikesPath
             }
         })
