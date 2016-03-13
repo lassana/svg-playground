@@ -14,6 +14,7 @@
     .js-warning {
         background: #FFC869;
         text-align: center;
+        padding: 6;
     }
     .js-warning-text {
         margin: 0;
@@ -33,6 +34,8 @@
     }
     .references {
         margin-left: 1cm;
+    }
+    .references, p {
         font-size: small;
     }
     -->
@@ -42,15 +45,28 @@
     <div id="js-warning" class="js-warning"><p class="js-warning-text">Enable JavaScript, please.</p></div>
     <div id="content">
         <h1>SVG playgroud. Click on an image to start or restart.</h1>
+        <p>Each SVG object contains a JS code which can be used on any platform with SVG API.</p>
         <ol id="main-list">
-            <li>
-                <h2>Path tracing.</h2>
+            <li id="path-tracing">
+                <h2><a href="#path-tracing">Path tracing.</a></h2>
                 <object id="svg1" data="card.svg" type="image/svg+xml" class="svg-object"></object>
                 <div class="references">
                     <p>References:</p>
                     <ol>
                         <li><a href="http://www.curious-creature.com/2013/12/21/android-recipe-4-path-tracing/">Android Recipe #4, path tracing</a> by Romain Guy.</li>
                         <li><a href="https://habrahabr.ru/company/2gis/blog/275489/">One ProgressBar's story (in Russian)</a> by 2GIS team.</li>
+                    </ol>
+                </div>
+            </li>
+            <li id="wave-filling">
+                <h2><a href="#wave-filling">Wave filling.</a></h2>
+                <object id="svg2" data="suse.svg" type="image/svg+xml" class="svg-object"></object>
+                <div class="references">
+                    <p>References:</p>
+                    <ol>
+                        <li><a href="https://en.m.wikipedia.org/wiki/File:OpenSUSE_official-logo-color.svg">OpenSUSE official-logo-color.svg</a>.</li>
+                        <li><a href="http://jorgecastillo.xyz/2015/08/16/android-fillable-loaders/">Play with SVG Paths in Canvas with AndroidFillableLoaders</a> by  Jorge Castillo.</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">SVG Attribute reference</a> by Mozilla Developer Network.</li>
                     </ol>
                 </div>
             </li>

@@ -27,7 +27,7 @@
                 resetLines("second-path")
                 drawRedLine()
             });
-            drawRedLine()
+            //drawRedLine()
         });
         
         function resetLines(className) {
