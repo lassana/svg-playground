@@ -10,12 +10,20 @@
     <defs id="defs4156">
         <clipPath id="clipPath4769" 
                   clipPathUnits="userSpaceOnUse">
+            <!--  -->
             <path id="path4771" 
                   d="m 0 336 v 336 h665 v-336 z" 
                   fill-opacity=".5" 
                   fill-rule="evenodd"/>
         </clipPath>
     </defs>
+    <!--
+    <path id="path47" 
+          d="M 0,336 0,672 665,672 665,336 Z"
+    d="m 0,335.984375 0, -10 664.49609375,0 0,10 z"
+          transform="translate(0,-178)"
+          stroke="black"/>
+    -->
     <g id="layer1g"
        fill="none"
        stroke="gray"
@@ -31,10 +39,11 @@
     </g>
     <script id="script4265"><![CDATA[
         document.addEventListener("DOMContentLoaded", function(event) { 
-            var timing = 15
+            var timing = 25
             var interval = null
         
             var clipPath = document.getElementById("clipPath4769")
+            var clipPathData = document.getElementById("path4771")
             var shift = 0
             var height = document.getElementById("layer1").getBBox().height
             var width = document.getElementById("layer1").getBBox().width
@@ -42,37 +51,42 @@
             document.getElementById("svg4154").addEventListener("click", function () {
                 window.clearInterval(interval)
                 clipPath.setAttribute("transform", "translate(0,0)")
+                clipPath.setAttribute("d", "")
                 shift = 0 
                 
                 interval = setInterval(function () {
                     shift -= 1
-                    clipPath.setAttribute("transform", "translate(0," + (shift) +")")
+                    
+                    var aPath = buildClippingPathForHeight(-1 * shift)
+                    clipPathData.setAttribute("d", aPath)
+                    
                     if (shift <= -1 * height ) {
                         window.clearInterval(interval)
                     }
                 }, timing)
             })
             
-            function buildClippingPath() {
+            function buildClippingPathForHeight(heightDiff) {
                 var spikesPath = ""
                 
-                var heightDiff = width / 32
-                var widthDiff = width / 32
-                var startingHeight = height - heightDiff
+                //move to a bottom-left point
+                spikesPath += "m 0," + height
                 
-                //// spikesPath.moveTo(0, startingHeight);
+                //move to a top-left point
+                spikesPath += " 0, -" + heightDiff
                 
-                var nextX = widthDiff
-                var nextY = startingHeight + heightDiff
+                //TODO draw a arrows or something
+                
+                //move to a top-right point
+                spikesPath += " " + width + ",0"
+                
+                //move to a bottom-right point
+                spikesPath += " 0," + heightDiff
+                
+                //close path data
+                spikesPath += " z"
 
-                for (var i = 0; i < 32; i++) {
-                    //// spikesPath.lineTo(nextX, nextY)
-                    nextX += widthDiff
-                    nextY += (i % 2 == 0) ? heightDiff : -heightDiff
-                }
-                //// spikesPath.lineTo(width, 0);
-                //// spikesPath.lineTo(0, 0);
-                //// spikesPath.close();
+                return spikesPath
             }
         })
     ]]></script>
