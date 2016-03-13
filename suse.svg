@@ -45,12 +45,12 @@
             var clipPath = document.getElementById("clipPath4769")
             var clipPathData = document.getElementById("path4771")
             var shift = 0
-            var spikesCount = 20
-            var waveHeight = 20
+            var spikesCount = 12
+            var waveHeight = 10
             var height = document.getElementById("layer1").getBBox().height
             var width = document.getElementById("layer1").getBBox().width
 
-            alert(buildClippingPathForHeight(100))
+            alert(buildClippingPathForHeight(100, true))
             
             document.getElementById("svg4154").addEventListener("click", function () {
                 window.clearInterval(interval)
@@ -61,20 +61,16 @@
                 interval = setInterval(function () {
                     shift -= 2
                     
-                    var aPath = buildClippingPathForHeight(-1 * shift)
+                    var aPath = buildClippingPathForHeight(-1 * shift, true)
                     clipPathData.setAttribute("d", aPath)
                     
-                    if (shift <= -1 * height ) {
+                    if (shift <= -1 * (height+waveHeight) ) {
                         window.clearInterval(interval)
                     }
                 }, timing)
             })
             
-            function buildClippingPathForHeight(step) {
-                //m 0,336        0,-100  332.5,-70     332.5,70      0,100 z
-                //m 0,335.98437  0,-100  332.24805,-70 332.24804,70  0,100 z
-                
-            
+            function buildClippingPathForHeight(step, isSmooth) {
                 console.log("step = " + step)
                 var spikesPath = ""
                 
@@ -84,24 +80,42 @@
                 //move to a top-left point
                 spikesPath += " 0,-" + step
                 
-                //TODO draw a arrows or something
-                
                 var heightDiff = waveHeight
                 var widthDiff = width / (spikesCount + 1)
                 
+                //draw tops of spikes/waves
                 var nextX = widthDiff
                 var nextY = -1 * heightDiff
-                for (var i = 0; i < spikesCount+1; i++) {
-                    spikesPath += " " + nextX + "," + nextY
-                    //nextX += widthDiff
-                    nextY = (i % 2 == 0) ? (heightDiff) : (-1 * heightDiff)
+                if (isSmooth)
+                {
+                    spikesPath += " c"
+                    for (var i = 0; i < spikesCount+1; i++) {
+                        spikesPath += " " + (nextX/2) + "," + nextY
+                                    + " " + (nextX/2) + "," + (nextY*2)
+                                    + " " + nextX + "," + nextY
+                        nextY = (i % 2 == 0) ? (heightDiff) : (-1 * heightDiff)
+                    }
+                }
+                else 
+                {
+                    for (var i = 0; i < spikesCount+1; i++) {
+                        spikesPath += " " + nextX + "," + nextY
+                        nextY = (i % 2 == 0) ? (heightDiff) : (-1 * heightDiff)
+                    }
                 }
                 
                 //move to a top-right point
                 //spikesPath += " " + width + ",0"
                 
                 //move to a bottom-right point
-                spikesPath += " 0," + (step + (spikesCount % 2 == 0 ? nextY : 0))
+                if (isSmooth)
+                {
+                    spikesPath += " l 0," + (step + (spikesCount % 2 == 0 ? nextY : 0))
+                }
+                else
+                {
+                    spikesPath += " 0," + (step + (spikesCount % 2 == 0 ? nextY : 0))
+                }
                 
                 //close path data
                 spikesPath += " z"
