@@ -40,89 +40,87 @@
     <script id="script4265"><![CDATA[
         document.addEventListener("DOMContentLoaded", function(event) { 
             var timing = 32
-            var interval = null
-        
-            var clipPath = document.getElementById("clipPath4769")
+            var interval = null        
             var clipPathData = document.getElementById("path4771")
             var shift = 0
-            var spikesCount = 12
-            var waveHeight = 10
-            var height = document.getElementById("layer1").getBBox().height
-            var width = document.getElementById("layer1").getBBox().width
+            var areaHeight = document.getElementById("layer1").getBBox().height
+            var areaWidth = document.getElementById("layer1").getBBox().width
+            var variation = 12
+            var heightOffset = 20
+            var waveSpeed = 80
 
-            alert(buildClippingPathForHeight(100, true))
-            
             document.getElementById("svg4154").addEventListener("click", function () {
                 window.clearInterval(interval)
-                clipPath.setAttribute("transform", "translate(0,0)")
-                clipPath.setAttribute("d", "")
+                clipPathData.setAttribute("d", "")
                 shift = 0 
                 
                 interval = setInterval(function () {
-                    shift -= 2
-                    
-                    var aPath = buildClippingPathForHeight(-1 * shift, true)
+                    shift += 1                    
+                    var aPath = buildWaveAtIndex(shift % waveSpeed, waveSpeed, shift)
                     clipPathData.setAttribute("d", aPath)
-                    
-                    if (shift <= -1 * (height+waveHeight) ) {
+                    if (shift > (areaHeight + heightOffset) ) {
                         window.clearInterval(interval)
                     }
                 }, timing)
             })
             
-            function buildClippingPathForHeight(step, isSmooth) {
-                console.log("step = " + step)
-                var spikesPath = ""
-                
-                //move to a bottom-left point
-                spikesPath += "m 0," + height
-                
-                //move to a top-left point
-                spikesPath += " 0,-" + step
-                
-                var heightDiff = waveHeight
-                var widthDiff = width / (spikesCount + 1)
-                
-                //draw tops of spikes/waves
-                var nextX = widthDiff
-                var nextY = -1 * heightDiff
-                if (isSmooth)
-                {
-                    spikesPath += " c"
-                    for (var i = 0; i < spikesCount+1; i++) {
-                        spikesPath += " " + (nextX/2) + "," + nextY
-                                    + " " + (nextX/2) + "," + (nextY*2)
-                                    + " " + nextX + "," + nextY
-                        nextY = (i % 2 == 0) ? (heightDiff) : (-1 * heightDiff)
-                    }
-                }
-                else 
-                {
-                    for (var i = 0; i < spikesCount+1; i++) {
-                        spikesPath += " " + nextX + "," + nextY
-                        nextY = (i % 2 == 0) ? (heightDiff) : (-1 * heightDiff)
-                    }
-                }
-                
-                //move to a top-right point
-                //spikesPath += " " + width + ",0"
-                
-                //move to a bottom-right point
-                if (isSmooth)
-                {
-                    spikesPath += " l 0," + (step + (spikesCount % 2 == 0 ? nextY : 0))
-                }
-                else
-                {
-                    spikesPath += " 0," + (step + (spikesCount % 2 == 0 ? nextY : 0))
-                }
-                
-                //close path data
-                spikesPath += " z"
+            function buildWaveAtIndex(index, waveCount, height) {
+                var startingHeight = height - heightOffset
+                var initialOrLast = (index == 1 || index == waveCount)
 
-                console.log("spikesPath = " + spikesPath)
+                var xMovement = (areaWidth / waveCount) * index
+                var divisions = 8
+
+                // Start path
+                var wavesPath = "M " + (-areaWidth) + "," + startingHeight
+
+                // First wave
+                wavesPath += " Q " + (-areaWidth + areaWidth / divisions + xMovement)
+                             + "," + (startingHeight + variation)
+                             + " " + (-areaWidth + areaWidth / 4 + xMovement)
+                             + "," + (startingHeight)
+                wavesPath += " Q " + (-areaWidth + areaWidth / divisions * 3 + xMovement)
+                            + "," + (startingHeight - variation)
+                            + " " + (-areaWidth + areaWidth / 2 + xMovement)
+                            + "," + (startingHeight)
                 
-                return spikesPath
+                // Second wave
+                wavesPath += " Q " + (-areaWidth + areaWidth / divisions * 5 + xMovement)
+                            + "," + (startingHeight + variation)
+                            + " " + (-areaWidth + areaWidth / 4 * 3 + xMovement)
+                            + "," + (startingHeight)
+                wavesPath += " Q " + (-areaWidth + areaWidth / divisions * 7 + xMovement)
+                            + "," + (startingHeight - variation)
+                            + " " + (-areaWidth + areaWidth + xMovement)
+                            + "," + (startingHeight)
+
+                // Third wave
+                wavesPath += " Q " + (areaWidth / divisions + xMovement)
+                            + "," + (startingHeight + variation)
+                            + " " + (areaWidth / 4 + xMovement)
+                            + "," + (startingHeight)
+                wavesPath += " Q " + (areaWidth / divisions * 3 + xMovement)
+                            + "," + (startingHeight - variation)
+                            + " " + (areaWidth / 2 + xMovement)
+                            + "," + (startingHeight)
+
+                // Forth wave
+                wavesPath += " Q " + (areaWidth / divisions * 5 + xMovement)
+                            + "," + (startingHeight + variation)
+                            + " " + (areaWidth / 4 * 3 + xMovement)
+                            + "," + (startingHeight)
+                wavesPath += " Q " + (areaWidth / divisions * 7 + xMovement)
+                            + "," + (startingHeight - variation)
+                            + " " + (areaWidth + xMovement)
+                            + "," + (startingHeight)
+
+                // Closing path
+                wavesPath += " L " + (areaWidth + 100) + "," + (startingHeight)
+                wavesPath += " L " + (areaWidth + 100) + "," +  0
+                wavesPath += " L 0,0"
+                wavesPath += " Z"
+                
+                return wavesPath
             }
         })
     ]]></script>
