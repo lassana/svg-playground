@@ -2,17 +2,16 @@
 <svg id="svg2" 
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
      xmlns="http://www.w3.org/2000/svg" 
-     height="540.81pt" 
-     width="320.09pt" 
+     height="183.65538pt" 
+     width="113.30000pt" 
      version="1.1" 
      xmlns:cc="http://creativecommons.org/ns#" 
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <g id="path4421"
-       >
-        <path id="path4138" 
-              d="M 0,234.85628 0,49.437012 C 0,29.658958 21.190773,11.99998 54.036471,11.99998 116.54925,11.99998 141.625,26.127162 141.625,53.675167 L 141.625,234.85628 C 127.16358,248.48715 107.84908,239.5473 94.795598,224.21674 83.438367,216.79997 62.324852,218.00299 52.435824,225.06658 44.689394,231.61041 0.01894455,244.95536 0,234.85628 Z" 
+    <path id="path4138" 
+              d=" M 0,234.85628 L 0,49.437012 C 0,29.658958 21.190773,11.99998 54.036471,11.99998 C 116.54925,11.99998 141.625,26.127162 141.625,53.675167 L 141.625,234.85628 C 130.16358,246.23715 109.21688,233.46133333333333 97.795598,221.55007333333333 C 87.374312,213.05548 66.10471100000001,220.12721 55.435824,225.81658 C 42.766937,230.75595 0,244.95536   0,231.85628 Z" 
               fill-rule="evenodd" 
               fill="#8926ac"/>
+    <g id="path4421">
         <ellipse id="path4140" 
                  rx="6.5590487" 
                  ry="10.343116" 
@@ -38,17 +37,19 @@
     </g>
     <script id="script4008"><![CDATA[
         var intervalRef
+        
         var swimmingPath
+        var eyeLeft
+        var eyeRight
+        
         var aGroup
-        var width
-        var height
+        var maxOffset = 16
         var step = 0
+        
         
         document.addEventListener("DOMContentLoaded", function(event) {
             swimmingPath = document.getElementById("path4138")
             aGroup = document.getElementById("path4421")
-            width = document.getElementById("svg2").getBBox().width
-            height = document.getElementById("svg2").getBBox().height
             
             document.getElementById("svg2").addEventListener("click", function () {
                 if (intervalRef) {
@@ -62,48 +63,45 @@
         
         function letsSwim() {
             intervalRef = setInterval(function () {
-                var aPath = buildWavePath(step)
+                var delta = getDelta(step)
+                var xDelta = delta/8
+                var yDelta = delta/2
+                var aPath = buildWavePath(step, delta, xDelta, yDelta)
                 swimmingPath.setAttribute("d", aPath)
-                aGroup.setAttribute("transform", "translate(0," + (getDelta(step)/2) + ")")
+                aGroup.setAttribute("transform", "translate(" + 0 + "," + yDelta + ")")
                 step += 1
-            }, 16) // 33 ms allows get ~30 FPS
+            }, 25)
         }
         
         function getDelta(index) {
-            var max = 18
-            var p = index % (max*2)
+            var p = index % (maxOffset*2)
             var rvalue
-            if (p>max) {
-                rvalue = max-(p%max)
+            if (p>maxOffset) {
+                rvalue = maxOffset-(p%maxOffset)
             } else {
                 rvalue = p
             }
             rvalue /= 2
-            return rvalue-(max/3)
+            return rvalue-(maxOffset/3)
         }
         
-        function buildWavePath(index) {
-            //#0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17
-            // 0  1  2  3  4  5  6  7  8  9  8  7  6  5  4  3  2  1
-            var delta = getDelta(index)
-            console.log('delta for ' + index + ' is ' + delta)
+        function buildWavePath(index, delta, xDelta, yDelta) {
             var path = ""
-                      
-            //, , , , , , , 0.01894455, 0, Z
-            path += " M 0,234.85628"
-            path += " L 0,49.437012"
-            path += " C 0,29.658958 21.190773,11.99998 54.036471,11.99998"
-            path += " C 116.54925,11.99998 141.625,26.127162 141.625,53.675167 "
-            
-            path += " L 141.625,234.85628"
-          
-            path += " C 127.16358," + (248.48715+delta*3/8) + " 107.84908," + (239.5473+delta/4) + " 94.795598," + (224.21674+delta/4)
-            
-            path += " C " + (83.438367-delta/8) + "," + (216.79997-delta/8) + " " + (62.324852-delta/8) + "," + (218.00299-delta/8) + " 52.435824," + (225.06658-delta/8)
-            path += " C 44.689394,231.61041   0,244.95536   0," + (234.85628+delta/2)
-            
+
+            path += " M " + (0+xDelta) + "," + (234.85628+yDelta)
+            path += " L " + (0+xDelta) + "," + (49.437012+yDelta)
+            path += " C " + (0+xDelta) + "," + (29.658958+yDelta) + " " + (21.190773+xDelta) + "," + (11.99998+yDelta) + " " + (54.036471+xDelta) + "," + (11.99998+yDelta)
+            path += " C " + (116.54925+xDelta) +"," + (11.99998+yDelta) + " " + (141.625+xDelta) + "," + (26.127162+yDelta) + " " + (141.625+xDelta) + "," + (53.675167+yDelta)
+
+            path += " L " + (141.625+xDelta) + "," + (234.85628+yDelta)
+
+            path += " C " + (127.16358-delta/2.00+xDelta) + "," + (248.48715+delta*3/8+yDelta) + " " + (105.21688-delta/1.50+xDelta) + "," + (236.128+delta/2.25+yDelta)  + " " + (94.795598-delta/2.00+xDelta) + "," + (224.21674+delta/2.25+yDelta)
+            path += " C " + (84.374312-delta/2.00+xDelta) + "," + (212.30548-delta/8+yDelta)   + " " + (62.104711-delta/1.50+xDelta) + "," + (219.37721-delta/8+yDelta)   + " " + (52.435824-delta/2.00+xDelta) + "," + (225.06658-delta/8+yDelta)
+
+            path += " C " + (42.766937+xDelta) + "," + (230.75595+yDelta) + " " + (0+xDelta) + "," + (244.95536+yDelta) + "   " + (0+xDelta) + "," + (234.85628+delta/2+yDelta)
+
             path += " Z"
-            
+
             return path
         }
     ]]></script>
