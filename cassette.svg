@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="56.543mm" width="86.162mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 305.3 200.34998">
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(-134.85 -267.21)">
+  <rect id="rect5831" rx="2" ry="2" height="200" width="305" stroke="#000" y="267.36" x="135" stroke-width="0.3" fill="#c8c8c8"/>
+  <path id="path5206" d="m180 467.36 15-50h185l15 50z" fill-rule="evenodd" stroke="#000" stroke-width="0.4" fill="#a8a8a8"/>
+  <g id="g5267">
+   <g>
+    <circle id="path4157" cy="451.38" cx="215.48" r="6.7424"/>
+    <circle id="circle4159" cx="245.03" cy="447.59" r="6.7424"/>
+    <circle id="circle4161" cy="447.34" cx="328.11" r="6.7424"/>
+    <circle id="circle4163" cx="357.91" cy="451.63" r="6.7424"/>
+    <circle id="circle4165" cy="430.92" cx="286.7" r="6.7424"/>
+   </g>
+   <path id="path4181" d="m284.09 428.47 5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <path id="path4183" d="m289.09 428.47-5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <circle id="circle5141" cx="427.05" cy="453.42" r="6.7424"/>
+   <path id="path5143" d="m424.45 450.97 5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <path id="path5145" d="m429.45 450.97-5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <circle id="circle5147" cy="279.85" cx="426.34" r="6.7424"/>
+   <path id="path5149" d="m423.73 277.4 5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <path id="path5151" d="m428.73 277.4-5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <circle id="circle5153" cx="147.41" cy="279.49" r="6.7424"/>
+   <path id="path5155" d="m144.81 277.04 5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <path id="path5157" d="m149.81 277.04-5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <circle id="circle5159" cy="453.42" cx="148.48" r="6.7424"/>
+   <path id="path5161" d="m145.88 450.97 5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+   <path id="path5163" d="m150.88 450.97-5 5" stroke="#fff" stroke-width="1px" fill="none"/>
+  </g>
+  <rect id="rect5759" rx="2.9975" ry="3" height="125" width="264.78" y="287.98" x="154.96" fill="#fff"/>
+  <g id="g5575" transform="translate(-.40901 2.74)">
+   <g id="g5565">
+    <g stroke="#000" stroke-width="1px" fill="none">
+     <path id="path4189" d="m410 305.36-225-1"/>
+     <path id="path4191" d="m185 313.36h225"/>
+     <path id="path4193" d="m410 322.36h-225"/>
+     <path id="path4187" d="m185 295.36h225"/>
+    </g>
+    <g id="g5560" transform="translate(-25,59)">
+     <path id="path4195" d="m186.75 235.86h18v17h-18v-17" fill-rule="evenodd" stroke="#000" stroke-width="1px"/>
+     <g id="text4197" fill="#fff" transform="matrix(1.004 0 0 .99606 23.75 -59.5)">
+      <path id="path4208" d="m171.27 301.07-1.96 5.29h3.92l-1.96-5.29zm-0.82-1.42h1.64l4.05 10.64h-1.5l-0.97-2.73h-4.79l-0.97 2.73h-1.52l4.06-10.64z" fill="#fff"/>
+     </g>
+    </g>
+   </g>
+   <g id="g5506">
+    <g id="g5221" font-size="40px" font-family="sans-serif" fill="#000000">
+     <text id="text5083" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="352.89792" x="162.5" xml:space="preserve"><tspan id="tspan5085" font-size="5px" y="352.89792" x="162.5">Normal Bass</tspan></text>
+     <text id="text5087" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="358.25507" x="162.67857" line-height="125%"><tspan id="tspan5089" font-size="5px" y="358.25507" x="162.67857">120 μs EQ </tspan></text>
+    </g>
+    <g id="g5209">
+     <text id="text5101" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="352.18362" x="380" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan5103" font-size="5px" y="352.18362" x="380">Noise</tspan></text>
+     <text id="text5105" style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="40px" y="358.25507" x="379.73215" font-family="sans-serif" xml:space="preserve" fill="#000000"><tspan id="tspan5107" font-size="5px" y="358.25507" x="379.73215">Reduction</tspan></text>
+     <path id="path5119" d="m381 361.36h6v6h-6z" stroke="#000" stroke-width="1px" fill="none"/>
+     <path id="path5121" d="m381 370.36h6v6h-6v-6z" stroke="#000" stroke-width="1px" fill="none"/>
+     <text id="text5123" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="366.84137" x="389.58115" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan5125" font-size="7.5px" y="366.84137" x="389.58115">IN</tspan></text>
+     <text id="text5131" style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="40px" y="376.05902" x="389.70743" font-family="sans-serif" xml:space="preserve" fill="#000000"><tspan id="tspan5133" font-size="7.5px" y="376.05902" x="389.70743">OUT</tspan></text>
+    </g>
+    <g id="g5379">
+     <g id="g4942" transform="matrix(.45097 0 0 .45097 311.96 386.57)">
+      <polygon id="polygon4335" points="11.813 2.355 1.497 20.202 11.813 14.245"/>
+      <polygon id="polygon4337" points="23.703 2.355 11.813 2.355 17.747 8.312"/>
+      <polygon id="polygon4339" points="17.747 8.312 11.813 14.245 23.71 14.245"/>
+      <polygon id="polygon4341" points="34.027 20.194 23.703 2.355 23.703 14.245"/>
+      <polygon id="polygon4343" points="25.89 22.374 28.07 30.511 34.027 20.194"/>
+      <polygon id="polygon4345" points="17.685 24.562 25.89 22.374 23.703 14.245"/>
+      <polygon id="polygon4347" points="7.453 30.518 28.07 30.511 17.685 24.562"/>
+      <polygon id="polygon4349" points="1.497 20.202 7.453 30.518 9.633 22.382"/>
+      <polygon id="polygon4351" points="11.813 14.245 9.633 22.382 17.685 24.562"/>
+      <polygon id="polygon4353" points="45.634 30.457 53.331 30.457 53.331 8.403 66.038 8.403 66.038 2.294 32.805 2.294 32.805 8.403 45.634 8.403"/>
+      <path id="path4355" d="m67.993 30.518v-28.224h19.427c8.559 0 13.87 6.838 13.87 13.746 0 7.208-4.951 14.479-13.87 14.479h-19.427zm7.697-6.353h10.202c7.27 0 8.247-6.109 8.247-8.125 0-2.202-1.884-7.637-8.369-7.637h-10.08v15.762z"/>
+      <polygon id="polygon4357" points="136.78 30.518 120.65 15.673 135.25 2.294 124.99 2.294 110.39 15.123 110.39 2.294 102.69 2.294 102.69 30.518 110.39 30.518 110.39 16.145 125.72 30.518"/>
+      <path id="path4359" d="m141.4 32.231c-2.24 0-4.14-1.721-4.14-4.076 0-2.334 1.9-4.055 4.14-4.055 2.21 0 4.11 1.721 4.11 4.055 0 2.355-1.9 4.076-4.11 4.076zm-3.32-4.076c0 1.958 1.46 3.398 3.32 3.398 1.84 0 3.29-1.441 3.29-3.398 0-1.925-1.45-3.377-3.29-3.377-1.86 0-3.32 1.451-3.32 3.377z"/>
+      <path id="path4361" d="m140.54 28.478v2.033h-0.71v-4.689h1.78c1.11 0 1.66 0.409 1.66 1.334 0 0.839-0.53 1.205-1.21 1.291l1.33 2.065h-0.8l-1.23-2.033h-0.82zm0-0.603h0.85c0.6 0 1.14-0.043 1.14-0.764 0-0.581-0.53-0.688-1.02-0.688h-0.97v1.452z"/>
+     </g>
+     <g id="g5368">
+      <g id="text4221" transform="scale(1.0359 .96536)">
+       <path id="path4230" d="m195.03 403.17v10.69h2.25q2.84 0 4.16-1.29t1.32-4.07q0-2.76-1.32-4.04-1.32-1.29-4.16-1.29h-2.25zm-1.86-1.53h3.82q4 0 5.87 1.67 1.87 1.65 1.87 5.19 0 3.55-1.88 5.22t-5.86 1.67h-3.82v-13.75z"/>
+      </g>
+      <g id="text4232" transform="scale(.97859 1.0219)">
+       <path id="path4237" d="m219.83 385.32h5.42v1.65h-5.42v-1.65z"/>
+      </g>
+      <text id="text4246" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="scale(1.03 .97086)" font-size="18.502px" y="413.28015" x="214.96764" font-family="sans-serif" line-height="125%" fill="#6139fb"><tspan id="tspan4248" font-weight="bold" y="413.28015" x="214.96764" font-family="sans-serif" fill="#6139fb">C60</tspan></text>
+      <text id="text5135" style="word-spacing:0px;letter-spacing:0px" line-height="125%" font-size="5px" y="393.30402" x="264.52542" font-family="sans-serif" xml:space="preserve" fill="#000000"><tspan id="tspan5137" y="393.30402" x="264.52542">Powered</tspan><tspan id="tspan5139" y="399.55402" x="264.52542">in Japan</tspan></text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="g6049">
+   <rect id="rect6045" height="5" width="265" y="332.36" x="155" fill="#e51d00"/>
+   <rect id="rect6047" height="5" width="265" y="337.36" x="155" fill="#373737"/>
+  </g>
+  <path id="path5165" d="m201.01 333.89v52.99l87.98-0.47a64.147 61.573 0 0 0 6.09 -26.03 64.147 61.573 0 0 0 -6.31 -26.49h-87.76z" fill="#101010"/>
+  <g id="g6175" transform="translate(-27.75,-182.5)">
+   <circle id="circle6177" cx="259.85" cy="542.56" r="20" fill="#fff"/>
+   <path id="path6179" d="m261.03 517.59a25 25 0 0 0 -13.68 3.32 25 25 0 0 0 -8.85 8.64 25 25 0 0 0 -0.3 25.51 25 25 0 0 0 20.47 12.47 25 25 0 0 0 13.68 -3.32 25 25 0 0 0 8.85 -8.64 25 25 0 0 0 0.3 -25.51 25 25 0 0 0 -20.47 -12.47zm-3.03 8.59v3.18h4v-3.13a16.5 16.5 0 0 1 11.11 6.54l-2.75 1.59 2 3.46 0.86-0.5 1.86-1.07a16.5 16.5 0 0 1 -0.12 12.9l-2.75-1.59-2 3.46 2.71 1.57a16.5 16.5 0 0 1 -4.82 4.26 16.5 16.5 0 0 1 -6.4 2.1v-3.19h-4v3.14a16.5 16.5 0 0 1 -11.12 -6.54l2.76-1.6-2-3.46-2.72 1.57a16.5 16.5 0 0 1 0.12 -12.9l2.75 1.59 2-3.46-2.71-1.57a16.5 16.5 0 0 1 4.82 -4.26 16.5 16.5 0 0 1 6.4 -2.09z" fill="#d83737"/>
+  </g>
+  <g id="g6171" transform="translate(85 -182.5)">
+   <circle id="path6169" cy="542.56" cx="259.85" r="20" fill="#fff"/>
+   <path id="path6117" d="m260.8 517.59a25 25 0 0 0 -13.68 3.32 25 25 0 0 0 -8.85 8.64 25 25 0 0 0 -0.3 25.51 25 25 0 0 0 20.47 12.47 25 25 0 0 0 13.68 -3.32 25 25 0 0 0 8.85 -8.64 25 25 0 0 0 0.3 -25.51 25 25 0 0 0 -20.47 -12.47zm-3.03 8.59v3.18h4v-3.13a16.5 16.5 0 0 1 11.11 6.54l-2.75 1.59 2 3.46 0.86-0.5 1.86-1.07a16.5 16.5 0 0 1 -0.11 12.9l-2.76-1.59-2 3.46 2.71 1.57a16.5 16.5 0 0 1 -4.82 4.26 16.5 16.5 0 0 1 -6.4 2.1v-3.19h-4v3.14a16.5 16.5 0 0 1 -11.12 -6.54l2.77-1.6-2-3.46-2.73 1.57a16.5 16.5 0 0 1 0.12 -12.9l2.76 1.59 2-3.46-2.72-1.57a16.5 16.5 0 0 1 4.82 -4.26 16.5 16.5 0 0 1 6.4 -2.09z" fill="#d83737"/>
+  </g>
+  <path id="rect5478" d="m203 332.34c-1.67 0-3 1.34-3 3v49c0 1.66 1.33 3 3 3h169c1.66 0 3-1.34 3-3v-49c0-1.66-1.34-3-3-3h-169zm38.87 13.62h93.13v29.88h-93.13v-29.88z" fill="#c8c8c8"/>
+ </g>
+    <script id="script4260" type="text/ecmascript"><![CDATA[
+        var interval = null
+        var left = null
+        var right = null
+        var leftCX, leftCY, rightCX, rightCY
+        var angle = 0
+        
+        document.addEventListener("DOMContentLoaded", function(event) {
+            left = document.getElementById('path6179')
+            right = document.getElementById('path6117')
+            
+            var leftBBox = left.getBBox()
+            leftCX = leftBBox.x + (leftBBox.width/2)
+            leftCY = leftBBox.y + (leftBBox.height/2)
+
+            var rightBBox = right.getBBox()
+            rightCX = rightBBox.x + (rightBBox.width/2)
+            rightCY = rightBBox.y + (rightBBox.height/2)
+            
+            document.getElementById("svg2").addEventListener("click", function () {
+                if (interval == null) {
+                    interval = setInterval(function () {
+                        //alert("rotate(" + (angle) + " " + leftCX + " " + leftCY + ")")
+                        left.setAttribute("transform", "rotate(" + (-angle) + " " + leftCX + " " + leftCY + ")")
+                        right.setAttribute("transform", "rotate(" + (-angle*3) + " " + rightCX + " " + rightCY + ")")
+                    
+                        angle += 1
+                        angle %= 360
+                    }, 16)
+                } else {
+                    window.clearInterval(interval)
+                    interval = null
+                }
+            })
+        })
+    ]]></script>
+</svg>

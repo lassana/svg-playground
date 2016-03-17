@@ -20,7 +20,7 @@
         stroke-width="2.0"
         stroke-dasharray="0 99999"
         fill="none"/>
-    <script id="script4260" type="text/javascript"><![CDATA[
+    <script id="script4260" type="text/ecmascript"><![CDATA[
         var mainInterval = null
 
         document.addEventListener("DOMContentLoaded", function(event) {

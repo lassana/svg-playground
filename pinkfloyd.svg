@@ -30,7 +30,7 @@
         
     </g>
     <path id="path4144" stroke-width="0.5" d="m238.13 182.11h-125.57l62.79-108.75z" stroke="#fff" fill="none"/>
-    <script id="script4265"><![CDATA[
+    <script id="script4265" type="text/ecmascript"><![CDATA[
         document.addEventListener("DOMContentLoaded", function(event) { 
             var shift = 0
             var yOffset

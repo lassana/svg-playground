@@ -35,7 +35,7 @@
             <circle id="path4165" cy="161.44449" cx="32.054749" r="2.0155432"/>
         </g>
     </g>
-    <script id="script4008"><![CDATA[
+    <script id="script4008" type="text/ecmascript"><![CDATA[
         var intervalRef
         
         var swimmingPath
